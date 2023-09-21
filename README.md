@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + kintone + material-ui
+This is a kintone mobile customize demo. It uses Vite as the development build tool.
+kintone vite plugin : [vite-plugin-kintone-dev](https://github.com/GuSanle/vite-plugin-kintone-dev)   
+npm: npm i -D vite-plugin-kintone-dev    
+This project use : React + TypeScript + Vite + kintone + material-ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## .env setting
+```
+VITE_KINTONE_URL=xx
+VITE_KINTONE_USER_NAME=xx
+VITE_KINTONE_PASSWORD=xx
+VITE_KINTONE_PLATFORM=xx
+VITE_KINTONE_TYPE=xx
+VITE_API_TOKEN=xx
+VITE_APP_ID=xx
+```
+## import the template 
+1. Import the kintone-template(Goods list.zip) to your kintone.
+2. Add some demo records
 
-Currently, two official plugins are available:
+## Project Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```sh
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
