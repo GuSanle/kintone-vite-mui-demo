@@ -28,3 +28,6 @@ kintone.events.on('mobile.portal.show', (event) => {
   )
   return event
 })
+const event = new Event("load");
+// @ts-ignore
+cybozu.eventTarget.dispatchEvent(event);
