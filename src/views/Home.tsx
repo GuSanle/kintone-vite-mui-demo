@@ -5,20 +5,24 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
+import type { GoodListAppRecord } from '@/types/restApiRecords'
 
 export default function App() {
   const getList = async () => {
     const kintoneClient = new KintoneApi()
-    const result = await kintoneClient.getAllRecords()
+    const appId = import.meta.env.VITE_APP_ID
+    const result = await kintoneClient.getAllRecords(appId)
     return result
   }
-  const [lsit, setData] = useState(null);
+  const [list, setData] = useState<GoodListAppRecord[]>([]);
   useEffect(() => {
     // 异步数据获取
     async function fetchData() {
       try {
         const response = await getList();
-        setData(response);
+        if (typeof (response) !== 'undefined') {
+          setData(response);
+        }
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -29,7 +33,7 @@ export default function App() {
   return (
     <div>
       <List>
-        {lsit !== null && lsit.map(({ num, price, desc, title, thumb }, index) => (
+        {list !== null && list.map(({ desc, title, thumb }, index) => (
           <ListItem sx={{
             bgcolor: 'background.paper',
             boxShadow: 1,

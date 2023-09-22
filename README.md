@@ -6,12 +6,6 @@ This project use : React + TypeScript + Vite + kintone + material-ui
 
 ## .env setting
 ```
-VITE_KINTONE_URL=xx
-VITE_KINTONE_USER_NAME=xx
-VITE_KINTONE_PASSWORD=xx
-VITE_KINTONE_PLATFORM=xx
-VITE_KINTONE_TYPE=xx
-VITE_API_TOKEN=xx
 VITE_APP_ID=xx
 ```
 ## import the template 

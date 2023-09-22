@@ -1,21 +1,16 @@
 //@ts-ignore
 import { KintoneRestAPIClient } from '@kintone/rest-api-client'
-const APP_ID = import.meta.env.VITE_APP_ID
+import type { GoodListAppRecord } from '@/types/restApiRecords'
 
 export class KintoneApi {
   client: KintoneRestAPIClient
   constructor() {
-    this.client = new KintoneRestAPIClient({
-      baseUrl: `https://${import.meta.env.VITE_KINTONE_URL}`,
-      auth: {
-        apiToken: import.meta.env.VITE_API_TOKEN,
-      },
-    })
+    this.client = new KintoneRestAPIClient({})
   }
 
-  public async getAllRecords() {
+  public async getAllRecords(app: string) {
     try {
-      return await this.client.record.getAllRecords({ app: APP_ID })
+      return await this.client.record.getAllRecords<GoodListAppRecord>({ app })
     } catch (error) {
       return
     }
