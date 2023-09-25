@@ -5,7 +5,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
-import type { GoodListAppRecord } from '@/types/restApiRecords'
 
 export default function App() {
   const getList = async () => {
@@ -14,7 +13,7 @@ export default function App() {
     const result = await kintoneClient.getAllRecords(appId)
     return result
   }
-  const [list, setData] = useState<GoodListAppRecord[]>([]);
+  const [list, setData] = useState<kintoneRest.GoodListAppRecord[]>([]);
   useEffect(() => {
     // 异步数据获取
     async function fetchData() {
