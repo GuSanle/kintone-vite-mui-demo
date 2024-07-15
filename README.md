@@ -1,33 +1,37 @@
 # React + TypeScript + Vite + kintone + material-ui
+
 This is a kintone mobile customize demo. It uses Vite as the development build tool.
-kintone vite plugin : [vite-plugin-kintone-dev](https://github.com/GuSanle/vite-plugin-kintone-dev)   
-npm: npm i -D vite-plugin-kintone-dev    
+kintone vite plugin : [vite-plugin-kintone-dev](https://github.com/GuSanle/vite-plugin-kintone-dev)  
+npm: npm i -D vite-plugin-kintone-dev  
 This project use : React + TypeScript + Vite + kintone + material-ui
 
-## .env setting
-```
-VITE_APP_ID=xx
-```
-## import the template 
+## Setp
+
 1. Import the kintone-template(Goods list.zip) to your kintone.
 2. Add some demo records
+3. Navigate to your project directory: cd [your porject]
+4. Install the project dependencies:
 
-## Project Setup
-
-```sh
+```
 npm install
 ```
 
+5. Start the development server:
 
-### Compile and Hot-Reload for Development
-
-```sh
+```
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+6. Follow the on-screen guide to automatically generate the .env.development file.
+7. Update the .env.development file and add the kintone application ID for the “Goods list” app:
 
-```sh
-npm run build
+```
+VITE_APP_ID=xx
 ```
 
+## Plugin Information
+
+For more details about the vite-plugin-kintone-dev, visit the GitHub repository:
+[vite-plugin-kintone-dev](https://github.com/GuSanle/vite-plugin-kintone-dev)
+
+<img src="images/demo.png" width="200" >
