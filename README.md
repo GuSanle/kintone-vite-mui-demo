@@ -13,13 +13,13 @@ This project use : React + TypeScript + Vite + kintone + material-ui
 4. Install the project dependencies:
 
 ```
-npm install
+pnpm install
 ```
 
 5. Start the development server:
 
 ```
-npm run dev
+pnpm run dev
 ```
 
 6. Follow the on-screen guide to automatically generate the .env.development file.
